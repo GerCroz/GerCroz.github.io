@@ -15,10 +15,9 @@
         <div class="contenido">
             <header>
                 <div class="contenido-header">
-                    
                     <nav id="nav" class="">
                         <ul id="links">
-                            <li><a href="#inicio" onclick="seleccionar(this)" >INICIO</a></li>
+                            <li><a href="#inicio" onclick="seleccionar(this)">INICIO</a></li>
                             <li><a href="#sobre-mi" onclick="seleccionar(this)">SOBRE MI</a></li>
                             <li><a href="#habilidades" onclick="seleccionar(this)">HABILIDADES</a></li>
                             <li><a href="#proyectos" onclick="seleccionar(this)">PROYECTOS</a></li>
@@ -26,8 +25,6 @@
                         </ul>
                     </nav>
                     <h1>PORTFOLIO</h1>
-
-                    <!-- iconos del menu responsive -->
                     <div id="icono-nav" onclick="responsiveMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </div>
@@ -39,26 +36,20 @@
                 <h3>Desarrollador FrontEnd</h3>        
             </div>
         </div>
-       
     </section>
 
     <!-- Seccion sobre el Programador -->
     <section id="sobre-mi">
-
         <div class="sobre-mi">
             <p class="titulo-seccion">Sobre Mi</p>
-            <h2>
-                Hola, soy <span>German Crozy</span>
-            </h2>
+            <h2>Hola, soy <span>German Crozy</span></h2>
             <h3>Analista de Sistemas y Desarrollador FrontEnd</h3>
-            
             <p>
-                Me gusta aprender constantemente sobre nuevas tecnología, 
-                estar siempre actualizado de lo ultimo y mas moderno. 
+                Me gusta aprender constantemente sobre nuevas tecnologías, 
+                estar siempre actualizado de lo último y más moderno. 
                 Entender las herramientas que utilizo. 
                 Crecer constantemente tanto en el ámbito laboral como en el estudio. 
                 Todos los días se aprende algo nuevo.
-                                
             </p>
         </div>        
         <div class="contenedor-foto">
@@ -66,95 +57,63 @@
         </div> 
     </section>
 
-    <!-- Seccion mis habilidades -->
+    <!-- Sección Habilidades corregida -->
     <div class="contenedor-habilidades" id="habilidades">
         <h3>HABILIDADES</h3>
-        <div class="habilidades"> 
-            <div id="Columna1">
-                <h2>Analisis de Sistemas</h2>          
+        <div class="skills-grid">
+
+            <div class="skill-item">
                 <div class="progress-circle over50 p90">
                     <span>90%</span>
                     <div class="left-half-clipper">
                         <div class="first50-bar"></div>
                         <div class="value-bar"></div>
                     </div>
-                </div> 
-                <h2>HTML</h2>           
+                </div>
+                <div class="skill-label">Análisis de Sistemas</div>
+            </div>
+
+            <div class="skill-item">
                 <div class="progress-circle over50 p85">
                     <span>85%</span>
                     <div class="left-half-clipper">
                         <div class="first50-bar"></div>
                         <div class="value-bar"></div>
                     </div>
-            </div> 
-        </div>
-        <div id="Columna2">
-                <h2>CSS</h2>          
+                </div>
+                <div class="skill-label">HTML</div>
+            </div>
+
+            <div class="skill-item">
                 <div class="progress-circle over50 p85">
-                <span>85%</span>
+                    <span>85%</span>
                     <div class="left-half-clipper">
                         <div class="first50-bar"></div>
                         <div class="value-bar"></div>
                     </div>
                 </div>
-                <h2>JAVASCRIPT</h2>
+                <div class="skill-label">CSS</div>
+            </div>
+
+            <div class="skill-item">
                 <div class="progress-circle over50 p75">
-                        <span>75%</span>
-                        <div class="left-half-clipper">
+                    <span>75%</span>
+                    <div class="left-half-clipper">
                         <div class="first50-bar"></div>
                         <div class="value-bar"></div>
                     </div>
                 </div>
+                <div class="skill-label">JavaScript</div>
             </div>
-            </div>
+
         </div>
     </div>
 
-    <!-- Seccion Proyectos  -->
+    <!-- Sección Proyectos -->
     <section id="proyectos">
         <h3 class="titulo-seccion">MIS PROYECTOS</h3>
         <div class="fila">
             <div class="proyecto">
                 <div class="overlay"></div>
-                <img src="./imagenes/Proyectos.PNG" alt="Imagen de fondo de porfolio personal">
-                <div class="info">
-                    <h4>Portfolio Personal</h4>
-                    <p>Diseño Web -HTML CSS JAVASCRIPT</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <img src=".
 
-    <!-- Seccion contacto con el Programador -->
-    <section id="contacto">
-
-        <div class="contacto">
-            <p class="titulo-seccion">Contacto</p>
-            <h2>
-                Telefono:  <span>+54 370 4391033</span>
-            </h2>
-            <h2>
-                E-mail: <span>Germanraulcrozy@gmail.com</span>
-            </h2>
-            <h2>
-                Github: <span>German Crozy</span>
-                <a href="https://github.com/GerCroz" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </h2>
-            <h2>
-                Linkedin: <span>German Crozy</span>
-                <a href="https://www.linkedin.com/in/german-crozy-0b680124b/?trk=public-profile-join-page" 
-                target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </h2>
-
-    </section>
-
-    <!-- FOOTER  -->
-    <footer>
-        <p>Crozy German - 2023</p>
-
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="/funciones/index.js"></script>
-</body>
-</html>
