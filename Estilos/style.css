@@ -17,7 +17,7 @@ h1, h2, h3 {
   margin-bottom: 15px;
 }
 
-/* Toggle Dark Mode Button */
+/* Toggle Dark Mode Button  se habilito la funcion de dark mode*/
 #toggle-dark-mode {
   position: fixed;
   top: 20px;
