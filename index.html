@@ -1,119 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="./Estilos/style.css">
-    <link rel="stylesheet" type="text/css" href="./Estilos/graf-circular.css">
-    <title>Portfolio Crozy German</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Portfolio Crozy German</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="estilos/style.css" />
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-    <section id="inicio">
-        <div class="contenido">
-            <header>
-                <div class="contenido-header">
-                    <nav id="nav" class="">
-                        <ul id="links">
-                            <li><a href="#inicio" onclick="seleccionar(this)">INICIO</a></li>
-                            <li><a href="#sobre-mi" onclick="seleccionar(this)">SOBRE MI</a></li>
-                            <li><a href="#habilidades" onclick="seleccionar(this)">HABILIDADES</a></li>
-                            <li><a href="#proyectos" onclick="seleccionar(this)">PROYECTOS</a></li>
-                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
-                        </ul>
-                    </nav>
-                    <h1>PORTFOLIO</h1>
-                    <div id="icono-nav" onclick="responsiveMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                </div>
-            </header>
-            <div class="presentacion">
-                <p class="bienvenida">Bienvenidos</p>
-                <h2>Soy <span>German Crozy<hr></span></h2>
-                <h3>Desarrollador FrontEnd</h3>        
-            </div>
-        </div>
-    </section>
+  <button id="toggle-dark-mode" class="fixed top-4 right-4 p-2 bg-green-400 text-black rounded-lg z-50 transition">🌙</button>
 
-    <!-- Seccion sobre el Programador -->
-    <section id="sobre-mi">
-        <div class="sobre-mi">
-            <p class="titulo-seccion">Sobre Mi</p>
-            <h2>Hola, soy <span>German Crozy</span></h2>
-            <h3>Analista de Sistemas y Desarrollador FrontEnd</h3>
-            <p>
-                Me gusta aprender constantemente sobre nuevas tecnologías, 
-                estar siempre actualizado de lo último y más moderno. 
-                Entender las herramientas que utilizo. 
-                Crecer constantemente tanto en el ámbito laboral como en el estudio. 
-                Todos los días se aprende algo nuevo.
-            </p>
-        </div>        
-        <div class="contenedor-foto">
-            <img src="./imagenes/Perfil2.png" alt="Foto formal para perfil">
-        </div> 
-    </section>
 
-    <!-- Sección Habilidades corregida -->
-    <div class="contenedor-habilidades" id="habilidades">
-        <h3>HABILIDADES</h3>
-        <div class="skills-grid">
+  <header class="bg-gray-800 text-white py-6">
+    <h1 class="text-4xl font-bold text-center">PORTFOLIO</h1>
+    <nav class="mt-4">
+      <ul id="links" class="flex flex-wrap justify-center gap-4">
+        <li><a href="#inicio" onclick="seleccionar(this)" class="hover:text-green-400">INICIO</a></li>
+        <li><a href="#sobre-mi" onclick="seleccionar(this)" class="hover:text-green-400">SOBRE MI</a></li>
+        <li><a href="#habilidades" onclick="seleccionar(this)" class="hover:text-green-400">HABILIDADES</a></li>
+        <li><a href="#proyectos" onclick="seleccionar(this)" class="hover:text-green-400">PROYECTOS</a></li>
+        <li><a href="#contacto" onclick="seleccionar(this)" class="hover:text-green-400">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <div class="skill-item">
-                <div class="progress-circle over50 p90">
-                    <span>90%</span>
-                    <div class="left-half-clipper">
-                        <div class="first50-bar"></div>
-                        <div class="value-bar"></div>
-                    </div>
-                </div>
-                <div class="skill-label">Análisis de Sistemas</div>
-            </div>
-
-            <div class="skill-item">
-                <div class="progress-circle over50 p85">
-                    <span>85%</span>
-                    <div class="left-half-clipper">
-                        <div class="first50-bar"></div>
-                        <div class="value-bar"></div>
-                    </div>
-                </div>
-                <div class="skill-label">HTML</div>
-            </div>
-
-            <div class="skill-item">
-                <div class="progress-circle over50 p85">
-                    <span>85%</span>
-                    <div class="left-half-clipper">
-                        <div class="first50-bar"></div>
-                        <div class="value-bar"></div>
-                    </div>
-                </div>
-                <div class="skill-label">CSS</div>
-            </div>
-
-            <div class="skill-item">
-                <div class="progress-circle over50 p75">
-                    <span>75%</span>
-                    <div class="left-half-clipper">
-                        <div class="first50-bar"></div>
-                        <div class="value-bar"></div>
-                    </div>
-                </div>
-                <div class="skill-label">JavaScript</div>
-            </div>
-
-        </div>
+  <section id="inicio" class="text-center py-20 bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/fondo.jpg');">
+    <div class="text-green-400 text-lg mb-4">Bienvenidos</div>
+    <div class="presentacion">
+      <h2 class="text-4xl font-bold">Soy <span>German Crozy</span></h2>
+      <h3 class="text-2xl text-gray-300 mt-2">Desarrollador FrontEnd</h3>
     </div>
+  </section>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos">
-        <h3 class="titulo-seccion">MIS PROYECTOS</h3>
-        <div class="fila">
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src=".
+  <section id="sobre-mi" class="flex flex-col md:flex-row items-center justify-center gap-10 py-16 px-4">
+    <div class="sobre-mi max-w-xl">
+      <h2 class="text-3xl font-bold mb-2">Hola, soy <span class="text-green-500">German Crozy</span></h2>
+      <h3 class="text-xl font-semibold mb-4">Analista de Sistemas y Desarrollador FrontEnd</h3>
+      <p>
+        Me gusta aprender constantemente sobre nuevas tecnologías,
+        estar siempre actualizado de lo último y más moderno.
+        Entender las herramientas que utilizo.
+        Crecer constantemente tanto en el ámbito laboral como en el estudio.
+        Todos los días se aprende algo nuevo.
+      </p>
+    </div>
+    <div class="contenedor-foto">
+      <img src="imagenes/Perfil2.png" alt="Foto formal para perfil" class="w-64 rounded-xl shadow-lg" />
+    </div>
+  </section>
 
+  <section class="contenedor-habilidades bg-gray-800 text-white py-16" id="habilidades">
+    <h3 class="text-2xl font-bold mb-8">HABILIDADES</h3>
+    <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+      <div class="skill-item">
+        <div class="skill-label mb-2 font-semibold">Análisis de Sistemas</div>
+        <div class="progress-bar w-full h-4 bg-gray-600 rounded-full">
+          <div class="progress-fill h-full bg-green-400 rounded-full" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label mb-2 font-semibold">HTML</div>
+        <div class="progress-bar w-full h-4 bg-gray-600 rounded-full">
+          <div class="progress-fill h-full bg-green-400 rounded-full" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label mb-2 font-semibold">CSS</div>
+        <div class="progress-bar w-full h-4 bg-gray-600 rounded-full">
+          <div class="progress-fill h-full bg-green-400 rounded-full" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label mb-2 font-semibold">JavaScript</div>
+        <div class="progress-bar w-full h-4 bg-gray-600 rounded-full">
+          <div class="progress-fill h-full bg-green-400 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="py-16 text-center">
+    <h3 class="text-2xl font-bold mb-8">MIS PROYECTOS</h3>
+    <div class="proyecto relative inline-block">
+      <img src="imagenes/Proyectos.PNG" alt="Imagen de fondo de porfolio personal" class="w-80 rounded-xl" />
+      <div class="info absolute bottom-4 left-4 bg-black bg-opacity-60 text-white p-4 rounded-md">
+        <h4 class="font-bold">Portfolio Personal</h4>
+        <p>Diseño Web - HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="bg-gray-100 dark:bg-gray-800 py-16 text-center">
+    <h2 class="text-xl md:text-2xl mb-4">Teléfono: <span class="text-green-500">+54 370 4391033</span></h2>
+    <h2 class="text-xl md:text-2xl mb-4">Email: <span class="text-green-500">Germanraulcrozy@gmail.com</span></h2>
+    <h2 class="text-xl md:text-2xl mb-4">
+      Github: <span class="text-green-500">German Crozy</span>
+      <a href="https://github.com/GerCroz" target="_blank" class="ml-2"><i class="fa-brands fa-github"></i></a>
+    </h2>
+    <h2 class="text-xl md:text-2xl">
+      Linkedin: <span class="text-green-500">German Crozy</span>
+      <a href="https://www.linkedin.com/in/german-crozy-0b680124b/" target="_blank" class="ml-2"><i class="fa-brands fa-linkedin"></i></a>
+    </h2>
+  </section>
+
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>Crozy German - 2023</p>
+  </footer>
+
+   <script>
+    const toggle = document.getElementById("toggle-dark-mode");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
