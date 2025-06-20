@@ -109,39 +109,61 @@
     <p>Crozy German - 2023</p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById("toggle-dark-mode");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-    });
+ <!-- Botón Subir -->
+<button id="scroll-top" class="fixed bottom-6 right-6 hidden p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition z-50 opacity-0 scale-75 transition-all duration-300">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
-    function seleccionar(link) {
-      const opciones = document.querySelectorAll("#links a");
-      opciones.forEach(opcion => opcion.classList.remove("text-green-400", "font-bold", "after:w-full"));
-      link.classList.add("text-green-400", "font-bold", "after:w-full");
+<script>
+  const toggle = document.getElementById("toggle-dark-mode");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+
+  function seleccionar(link) {
+    const opciones = document.querySelectorAll("#links a");
+    opciones.forEach(opcion => opcion.classList.remove("text-green-400", "font-bold", "after:w-full"));
+    link.classList.add("text-green-400", "font-bold", "after:w-full");
+  }
+
+  const secciones = document.querySelectorAll("section[id]");
+  const links = document.querySelectorAll("#links a");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(link => {
+          link.classList.remove("text-green-400", "font-bold", "after:w-full");
+          if (link.getAttribute("href").substring(1) === entry.target.id) {
+            link.classList.add("text-green-400", "font-bold", "after:w-full");
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  secciones.forEach(seccion => observer.observe(seccion));
+
+  // Mostrar botón scroll-top al hacer scroll con animación
+  const scrollTopBtn = document.getElementById("scroll-top");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.remove("hidden", "opacity-0", "scale-75");
+      scrollTopBtn.classList.add("opacity-100", "scale-100");
+    } else {
+      scrollTopBtn.classList.add("opacity-0", "scale-75");
+      scrollTopBtn.classList.remove("opacity-100", "scale-100");
     }
+  });
 
-    const secciones = document.querySelectorAll("section[id]");
-    const links = document.querySelectorAll("#links a");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          links.forEach(link => {
-            link.classList.remove("text-green-400", "font-bold", "after:w-full");
-            if (link.getAttribute("href").substring(1) === entry.target.id) {
-              link.classList.add("text-green-400", "font-bold", "after:w-full");
-            }
-          });
-        }
-      });
-    }, {
-      threshold: 0.6
-    });
-
-    secciones.forEach(seccion => observer.observe(seccion));
-  </script>
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+  
 
 </body>
 </html>
